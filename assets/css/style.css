@@ -1,0 +1,934 @@
+/* BRUTALIST BLOG DESIGN */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Inter:wght@400;700;900&display=swap');
+
+/* BRUTAL COLOR PALETTE - Reference Image Colors */
+:root {
+  --hot-pink: #FF69B4;         /* PRIMARY BRAND COLOR */
+  --sunny-yellow: #FDD835;     /* SECONDARY ACCENT */
+  --vibrant-pink: #FF1493;     /* DEEP PINK ASSAULT */
+  --rose-pink: #FF91A4;        /* MEDIUM PINK BRUTALISM */
+  --golden-yellow: #FFEB3B;    /* TEXT VIOLENCE */
+  --dark-yellow: #F5D020;      /* VERY SLIGHTLY DARKER YELLOW - HEADING BACKGROUNDS */
+  --light-pink: #FFB6C1;       /* BACKGROUND AGGRESSION */
+  --light-yellow: #FFF9C4;     /* LIGHT YELLOW BRUTALITY */
+  --coral-accent: #FF7F7F;     /* CORAL HARSHNESS */
+  --deep-purple: #4A0E4E;      /* CHARACTER HAIR DARKNESS */
+  --warm-skin: #D2B48C;        /* SKIN TONE BRUTALISM */
+  --charcoal: #2C1810;         /* DARK BROWN TEXT VIOLENCE */
+  --white: #FFFFFF;            /* STARK WHITE CONTRAST */
+  --brutal-shadow: 8px 8px 0px;
+  --harsh-border: 4px solid;
+}
+
+/* BRUTAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BRUTALIST BODY */
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--light-pink);
+  color: var(--charcoal);
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* BRUTALIST NAVIGATION - NO MERCY */
+.top-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--charcoal);
+  z-index: 1000;
+  padding: 0;
+  border: none;
+  border-bottom: var(--harsh-border) var(--hot-pink);
+  box-shadow: var(--brutal-shadow) var(--hot-pink);
+}
+
+.nav-container {
+  max-width: none;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.5rem;
+  background: var(--charcoal);
+}
+
+.nav-title {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.nav-title .profile-pic {
+  width: 48px;
+  height: 48px;
+  background-color: var(--sunny-yellow);
+  border: var(--harsh-border) var(--white);
+  box-shadow: var(--brutal-shadow) var(--vibrant-pink);
+  margin-right: 1rem;
+  transition: none;
+}
+
+.nav-title:hover {
+  color: var(--sunny-yellow);
+}
+
+.nav-title:hover .profile-pic {
+  background-color: var(--hot-pink);
+  transform: none;
+  box-shadow: var(--brutal-shadow) var(--sunny-yellow);
+}
+
+.nav-link {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: none;
+}
+
+.nav-link:hover {
+  color: var(--sunny-yellow);
+}
+
+.search-icon {
+  cursor: pointer;
+  color: var(--sunny-yellow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: none;
+}
+
+.search-icon:hover {
+  color: var(--hot-pink);
+}
+
+.search-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke-width: 3;
+}
+
+/* SECTION HEADERS - BRUTAL STYLING */
+.section-header {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 900;
+  color: var(--charcoal);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: var(--sunny-yellow);
+  border: var(--harsh-border) var(--charcoal);
+  box-shadow: var(--brutal-shadow) var(--charcoal);
+}
+
+/* BRUTALIST MAIN CONTAINER - TWO-COLUMN LAYOUT */
+.main-container {
+  display: flex;
+  justify-content: center;
+  max-width: none;
+  margin: 0;
+  padding: 90px 2rem 2rem;
+  min-height: 100vh;
+  background: var(--light-pink);
+}
+
+.content-wrapper {
+  display: flex;
+  gap: 3rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* MAIN CONTENT AREA */
+.content-area {
+  flex: 2;
+  min-width: 0;
+}
+
+/* BRUTALIST SIDEBAR */
+.sidebar {
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+  margin-top: 2rem;
+}
+
+.sidebar-section {
+  background: var(--sunny-yellow);
+  border: var(--harsh-border) var(--charcoal);
+  box-shadow: var(--brutal-shadow) var(--charcoal);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.sidebar-section:last-child {
+  margin-bottom: 0;
+}
+
+.sidebar-section h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--charcoal);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.sidebar-section h3:not(:first-child) {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 4px solid var(--charcoal);
+}
+
+.category-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.category-nav li {
+  margin-bottom: 0.75rem;
+}
+
+.category-nav a {
+  color: var(--charcoal);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  display: block;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid transparent;
+  transition: none;
+}
+
+.category-nav a:hover {
+  color: var(--white);
+  background: var(--charcoal);
+  padding: 0.5rem 1rem;
+  margin: 0 -1rem;
+}
+
+.about-content p {
+  margin-bottom: 1rem;
+  color: var(--charcoal);
+  line-height: 1.4;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.about-content p:last-child {
+  margin-bottom: 0;
+}
+
+
+
+/* BRUTAL BLOG CONTENT - NO SOFTNESS */
+.blog-content {
+  background: var(--sunny-yellow);
+  border: var(--harsh-border) var(--charcoal);
+  padding: 3rem;
+  line-height: 1.4;
+  box-shadow: var(--brutal-shadow) var(--charcoal);
+  border-radius: 0;
+  backdrop-filter: none;
+  transform: none;
+  margin-bottom: 2rem;
+}
+
+.blog-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: var(--hot-pink);
+  text-align: left;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'JetBrains Mono', monospace;
+  line-height: 0.9;
+}
+
+.blog-content h2,
+.post-preview .blog-content > h2 {
+  font-size: 2rem;
+  margin: 2rem 0 1rem;
+  color: var(--charcoal);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'JetBrains Mono', monospace;
+  padding: 1rem;
+  background: var(--dark-yellow);
+  border: var(--harsh-border) var(--charcoal);
+  box-shadow: var(--brutal-shadow) var(--charcoal);
+}
+
+.blog-content p {
+  margin-bottom: 1.5rem;
+  color: var(--charcoal);
+  line-height: 1.4;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.blog-content a {
+  color: var(--vibrant-pink);
+  text-decoration: underline;
+  font-weight: 900;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 2px;
+  transition: none;
+}
+
+.blog-content a:hover {
+  color: var(--sunny-yellow);
+  text-decoration: underline;
+  background: var(--charcoal);
+  padding: 2px 4px;
+}
+
+/* BRUTALIST POST LIST - HARSH GEOMETRY */
+.post-list {
+  list-style: none;
+  margin-top: 2rem;
+}
+
+.post-preview {
+  margin-bottom: 3rem;
+}
+
+.post-preview:not(.post-list .post-preview) {
+  margin-top: 2rem;
+}
+
+.post-preview:last-child {
+  margin-bottom: 0;
+}
+
+.post-preview .blog-content {
+  background: var(--sunny-yellow);
+  border: var(--harsh-border) var(--charcoal);
+  padding: 3rem;
+  line-height: 1.4;
+  box-shadow: var(--brutal-shadow) var(--charcoal);
+  transition: none;
+  transform: none;
+}
+
+.post-preview .blog-content:hover {
+  background: var(--sunny-yellow);
+  box-shadow: var(--brutal-shadow) var(--charcoal);
+}
+
+.post-preview h2 {
+  font-size: 2rem;
+  margin: 2rem 0 1rem;
+  margin-top: 0;
+  font-family: 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 1rem;
+  background: var(--dark-yellow);
+  border: var(--harsh-border) var(--charcoal);
+  box-shadow: var(--brutal-shadow) var(--charcoal);
+}
+
+.post-preview h2 a {
+  color: var(--charcoal);
+  text-decoration: none;
+  font-weight: 900;
+  transition: none;
+}
+
+.post-preview h2 a:hover {
+  color: var(--white);
+}
+
+.post-preview .post-content h1,
+.post-preview .post-content h2,
+.post-preview .post-content h3,
+.post-preview .post-content h4,
+.post-preview .post-content h5,
+.post-preview .post-content h6 {
+  color: var(--charcoal);
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-family: 'JetBrains Mono', monospace;
+  padding: 1rem;
+  background: var(--dark-yellow);
+  border: var(--harsh-border) var(--charcoal);
+  box-shadow: var(--brutal-shadow) var(--charcoal);
+}
+
+.post-preview .post-content h1:first-child,
+.post-preview .post-content h2:first-child,
+.post-preview .post-content h3:first-child,
+.post-preview .post-content h4:first-child,
+.post-preview .post-content h5:first-child,
+.post-preview .post-content h6:first-child,
+.post-preview .post-content p:first-child {
+  margin-top: 0;
+}
+
+.post-preview .post-content h1 { font-size: 1.8rem; }
+.post-preview .post-content h2 { font-size: 1.6rem; }
+.post-preview .post-content h3 { font-size: 1.4rem; }
+
+.post-preview .post-content p {
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+  color: var(--charcoal);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.post-preview .post-content ul,
+.post-preview .post-content ol {
+  margin: 1.5rem 0;
+  padding-left: 2rem;
+}
+
+.post-preview .post-content li {
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.post-preview .post-content code {
+  background: var(--charcoal);
+  color: var(--sunny-yellow);
+  padding: 0.3rem 0.6rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border: 2px solid var(--charcoal);
+}
+
+.post-preview .post-content pre {
+  background: var(--charcoal);
+  overflow-x: auto;
+}
+
+.post-preview .post-content pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--sunny-yellow);
+}
+
+.post-preview .post-content blockquote {
+  border-left: 8px solid var(--vibrant-pink);
+  margin: 2rem 0;
+  padding-left: 2rem;
+  background: var(--charcoal);
+  padding: 1.5rem 2rem;
+  color: var(--white);
+  font-weight: 700;
+  font-style: normal;
+}
+
+.post-preview .post-content a {
+  color: var(--vibrant-pink);
+  text-decoration: underline;
+  font-weight: 900;
+  text-decoration-thickness: 3px;
+  transition: none;
+}
+
+.post-preview .post-content a:hover {
+  color: var(--white);
+  background: var(--charcoal);
+  padding: 2px 4px;
+}
+
+/* BRUTAL POST DATE - HARSH TYPOGRAPHY */
+.post-date {
+  font-size: 1.2rem;
+  color: var(--charcoal);
+  margin-bottom: 2rem;
+  font-weight: 900;
+  position: relative;
+  padding-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.post-date::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: var(--charcoal);
+  opacity: 1;
+  box-shadow: none;
+}
+
+/* UNIFIED POST STYLING - REMOVED DUPLICATE SINGLE POST STYLES */
+
+/* BRUTALIST SEARCH - NO SOFTNESS ALLOWED */
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  transition: none;
+}
+
+.search-container input {
+  background: var(--white);
+  border: var(--harsh-border) var(--sunny-yellow);
+  outline: none;
+  color: var(--charcoal);
+  font-size: 1rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  padding: 1rem 1.5rem;
+  width: 0;
+  opacity: 0;
+  transition: width 0.3s ease, opacity 0.3s ease, margin 0.3s ease;
+  box-shadow: var(--brutal-shadow) var(--sunny-yellow);
+  text-transform: uppercase;
+}
+
+.search-container input::placeholder {
+  color: var(--charcoal);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.search-container:hover input,
+.search-container:focus-within input,
+.search-container input:not(:placeholder-shown) {
+  width: 300px;
+  opacity: 1;
+  margin-right: 1rem;
+}
+
+.search-container:focus-within input {
+  border-color: var(--sunny-yellow);
+  background: var(--white);
+  box-shadow: var(--brutal-shadow) var(--sunny-yellow);
+  transform: none;
+}
+
+.search-container .search-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--sunny-yellow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  transition: none;
+}
+
+.search-container .search-icon:hover {
+  color: var(--hot-pink);
+  transform: none;
+}
+
+/* BRUTALIST SEARCH RESULTS - HARSH DISPLAY */
+.search-query {
+  margin-bottom: 2rem;
+  color: var(--charcoal);
+  font-style: normal;
+  font-weight: 900;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.search-results-page {
+  margin-top: 2rem;
+}
+
+.search-result {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 8px solid var(--charcoal);
+}
+
+.search-result:last-child {
+  border-bottom: none;
+}
+
+.search-result h2 {
+  margin: 0 0 1rem 0;
+  font-size: 2rem;
+  font-family: 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+}
+
+.search-result h2 a {
+  color: var(--hot-pink);
+  text-decoration: none;
+  font-weight: 900;
+  transition: none;
+}
+
+.search-result h2 a:hover {
+  color: var(--sunny-yellow);
+  background: var(--charcoal);
+  padding: 4px 8px;
+}
+
+.search-result-date {
+  color: var(--charcoal);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.search-result-excerpt {
+  color: var(--charcoal);
+  line-height: 1.4;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.search-highlight {
+  background: var(--sunny-yellow);
+  color: var(--charcoal);
+  padding: 0.2rem 0.4rem;
+  font-weight: 900;
+  border: 2px solid var(--charcoal);
+}
+
+.search-hint {
+  padding: 3rem;
+  text-align: center;
+  color: var(--charcoal);
+  font-style: normal;
+  font-weight: 900;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.no-results {
+  padding: 3rem;
+  text-align: center;
+  color: var(--charcoal);
+  font-weight: 900;
+}
+
+.no-results-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--hot-pink);
+  text-transform: uppercase;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* BRUTALIST PAGINATION - GEOMETRIC HARSHNESS */
+.pagination {
+  margin: 4rem 0 3rem;
+  text-align: center;
+}
+
+.pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.pagination-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  background: var(--sunny-yellow);
+  border: var(--harsh-border) var(--charcoal);
+  color: var(--charcoal);
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-family: 'JetBrains Mono', monospace;
+  box-shadow: var(--brutal-shadow) var(--charcoal);
+  transition: none;
+}
+
+.pagination-btn:hover:not(.disabled) {
+  background: var(--hot-pink);
+  color: var(--white);
+  transform: translate(-2px, -2px);
+  box-shadow: 10px 10px 0px var(--charcoal);
+}
+
+.pagination-btn.disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+
+.pagination-pages {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 2rem;
+}
+
+.pagination-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  height: 48px;
+  background: var(--white);
+  border: var(--harsh-border) var(--charcoal);
+  color: var(--charcoal);
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 1rem;
+  font-family: 'JetBrains Mono', monospace;
+  box-shadow: 4px 4px 0px var(--charcoal);
+  transition: none;
+}
+
+.pagination-number:hover:not(.current) {
+  background: var(--sunny-yellow);
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px var(--charcoal);
+}
+
+.pagination-number.current {
+  background: var(--hot-pink);
+  color: var(--white);
+  font-weight: 900;
+  box-shadow: 6px 6px 0px var(--charcoal);
+}
+
+/* CATEGORIES PAGE STYLES */
+.categories-page {
+  margin-top: 2rem;
+}
+
+.category-section {
+  margin-bottom: 3rem;
+}
+
+.category-section h2 {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 900;
+  color: var(--charcoal);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: var(--sunny-yellow);
+  border: var(--harsh-border) var(--charcoal);
+  box-shadow: var(--brutal-shadow) var(--charcoal);
+}
+/* BRUTALIST RESPONSIVE DESIGN - HARSH ON ALL DEVICES */
+@media (max-width: 768px) {
+  .main-container {
+    padding: 90px 1rem 2rem;
+  }
+  
+  .content-wrapper {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .sidebar {
+    min-width: auto;
+    max-width: none;
+  }
+  
+  .sidebar-section {
+    padding: 1.5rem;
+  }
+  
+  .blog-content {
+    padding: 2rem;
+  }
+
+  .blog-content h1 {
+    font-size: 2.5rem;
+    line-height: 0.9;
+  }
+
+  .post-preview h2 {
+    font-size: 2rem;
+  }
+  
+  .nav-container {
+    padding: 1rem;
+  }
+
+  .nav-title {
+    font-size: 1.5rem;
+  }
+
+  .search-container:hover input,
+  .search-container:focus-within input,
+  .search-container input:not(:placeholder-shown) {
+    width: 200px;
+  }
+
+  .pagination-container {
+    gap: 1rem;
+  }
+  
+  .pagination-btn {
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .pagination-pages {
+    margin: 0 1rem;
+    gap: 0.5rem;
+  }
+  
+  .pagination-number {
+    min-width: 40px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+}
+
+/* BRUTALIST CODE BLOCK WRAPPER - CONTAINS COPY BUTTON + CODE */
+.code-block-wrapper {
+  background: var(--charcoal);
+  border: var(--harsh-border) var(--hot-pink);
+  box-shadow: var(--brutal-shadow) var(--hot-pink);
+  margin: 1.5rem 0;
+  overflow: hidden;
+}
+
+.code-topbar {
+  background: var(--charcoal);
+  padding: 0.5rem 0.75rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.code-copy-btn {
+  background: none;
+  border: none;
+  color: var(--white);
+  padding: 0.25rem;
+  cursor: pointer;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  transition: none;
+}
+
+.code-copy-btn:hover {
+  background: none;
+  color: var(--sunny-yellow);
+  border: none;
+}
+
+.code-copy-btn.copied {
+  background: none;
+  color: var(--sunny-yellow);
+  border: none;
+}
+
+/* SIMPLIFIED HIGHLIGHT BLOCK - DARK THEME */
+.highlight {
+  background: var(--charcoal);
+  border: none;
+  padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+  overflow-x: auto;
+  margin: 0;
+}
+
+.highlight pre {
+  margin: 0;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.highlight code {
+  background: none;
+  color: var(--sunny-yellow);
+  padding: 0;
+  font-size: 1rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* DARK SYNTAX COLORS */
+.highlight .c,
+.highlight .cm,
+.highlight .c1 { color: var(--coral-accent); }
+.highlight .k,
+.highlight .kc,
+.highlight .kd,
+.highlight .kn,
+.highlight .kp,
+.highlight .kr,
+.highlight .kt { color: var(--hot-pink); font-weight: 700; }
+.highlight .s,
+.highlight .s1,
+.highlight .s2,
+.highlight .sb,
+.highlight .sc,
+.highlight .sd,
+.highlight .sh,
+.highlight .sx,
+.highlight .sr { color: var(--light-yellow); }
+.highlight .m,
+.highlight .mf,
+.highlight .mh,
+.highlight .mi,
+.highlight .mo { color: var(--sunny-yellow); }
+.highlight .n,
+.highlight .nb,
+.highlight .nc,
+.highlight .nf,
+.highlight .nn,
+.highlight .bp { color: var(--white); }
+.highlight .o,
+.highlight .ow { color: var(--white); font-weight: 700; }
+
+/* FINAL BRUTALIST TOUCHES */
+* {
+  transition: none !important;
+}
+
+::selection {
+  background: var(--hot-pink);
+  color: var(--white);
+}

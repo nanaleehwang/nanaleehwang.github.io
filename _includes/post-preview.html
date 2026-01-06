@@ -1,0 +1,36 @@
+<article class="post-preview">
+  <div class="blog-content">
+    {% comment %}
+    Universal post rendering - identical structure everywhere
+    Variables: post (for lists), page (for individual posts), content (for individual posts)
+    {% endcomment %}
+    
+    {% if post %}
+      {% assign current_title = post.title %}
+      {% assign current_date = post.date %}
+      {% assign current_url = post.url %}
+      {% assign current_content = post.content %}
+      {% assign is_linked = true %}
+    {% else %}
+      {% assign current_title = page.title %}
+      {% assign current_date = page.date %}
+      {% assign current_url = page.url %}
+      {% assign current_content = content %}
+      {% assign is_linked = false %}
+    {% endif %}
+
+    <h2 class="post-title{% if is_linked %} post-title--linked{% endif %}">
+      {% if is_linked %}
+        <a href="{{ current_url }}">{{ current_title }}</a>
+      {% else %}
+        {{ current_title }}
+      {% endif %}
+    </h2>
+    
+    <p class="post-date">{{ current_date | date: "%B %d, %Y" }}</p>
+    
+    <div class="post-content">
+      {{ current_content }}
+    </div>
+  </div>
+</article>

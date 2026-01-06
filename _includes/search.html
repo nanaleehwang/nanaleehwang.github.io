@@ -1,0 +1,16 @@
+{% if include.type == 'form' %}
+<div class="search-container">
+  <form action="/search/" method="get" class="search-form">
+    <input type="text" name="q" id="searchInput" placeholder="Search posts..." autocomplete="off" />
+    <button type="button" class="search-icon" 
+            onclick="const input = document.getElementById('searchInput'); if(input.value.trim()) { input.form.submit(); } else { input.focus(); }"
+            onmouseover="document.getElementById('searchInput').focus();"
+            onmouseout="const input = document.getElementById('searchInput'); if(!input.value.trim()) { input.blur(); }">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"></circle>
+        <path d="m21 21-4.35-4.35"></path>
+      </svg>
+    </button>
+  </form>
+</div>
+{% endif %}

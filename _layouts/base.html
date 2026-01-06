@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% include head.html %}
+  </head>
+  <body>
+    {% include navigation.html %}
+
+    <div class="main-container">
+      <div class="content-wrapper">
+        <main class="content-area">
+          {{ content }}
+        </main>
+        
+        <aside class="sidebar">
+          <div class="sidebar-section">
+            <h3>Navigation</h3>
+            <nav class="category-nav">
+              <ul>
+                {% assign categories = site.categories | sort %}
+                {% for category in categories %}
+                  <li><a href="/categories.html#{{ category[0] | slugify }}">{{ category[0] }}</a></li>
+                {% endfor %}
+                {% if categories.size == 0 %}
+                  <li><a href="/">All Posts</a></li>
+                {% endif %}
+              </ul>
+            </nav>
+            
+            <h3>About</h3>
+            <div class="about-content">
+              <p>Welcome to my blog! I share insights about Korean and Mandarin language learning, cultural experiences, and teaching methods.</p>
+              <p>Native Korean speaker, fluent in Mandarin. Offering both in-person and remote lessons.</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    {% include scripts.html %}
+
+  </body>
+</html>

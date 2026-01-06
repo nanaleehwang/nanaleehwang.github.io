@@ -1,0 +1,12 @@
+---
+layout: home
+title: "Home"
+---
+
+<div class="post-list">
+{% for post in paginator.posts %}
+  {% include post-preview.html %}
+{% endfor %}
+</div>
+
+{% include pagination.html %}

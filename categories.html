@@ -1,0 +1,58 @@
+---
+layout: base
+title: Categories
+---
+
+<div class="categories-page">
+  <div class="posts-container">
+    {% for category in site.categories %}
+      <div class="category-section" data-category="{{ category[0] | slugify }}">
+        <h2>{{ category[0] }}</h2>
+        <div class="post-list">
+          {% assign sorted_posts = category[1] | sort: 'date' | reverse %}
+          {% for post in sorted_posts %}
+            {% include post-preview.html %}
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const categorySections = document.querySelectorAll('.category-section');
+  
+  // Handle URL hash for direct category linking
+  function handleHashChange() {
+    const hash = window.location.hash.substring(1);
+    if (hash && hash !== 'all') {
+      showCategory(hash);
+    } else {
+      showAllCategories();
+    }
+  }
+  
+  // Initial load
+  handleHashChange();
+  
+  // Listen for hash changes (when clicking different category links)
+  window.addEventListener('hashchange', handleHashChange);
+  
+  function showAllCategories() {
+    categorySections.forEach(section => {
+      section.style.display = 'block';
+    });
+  }
+  
+  function showCategory(category) {
+    categorySections.forEach(section => {
+      if (section.dataset.category === category) {
+        section.style.display = 'block';
+      } else {
+        section.style.display = 'none';
+      }
+    });
+  }
+});
+</script>

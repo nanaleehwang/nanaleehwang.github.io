@@ -86,7 +86,7 @@
   function displayResults(results, query) {
     if (!query) {
       searchQuery.innerHTML = '';
-      searchResults.innerHTML = '<div class="search-hint">Enter a search term in the URL (?q=your-search)</div>';
+      searchResults.innerHTML = '<div class="blog-content"><div class="search-hint">Enter a search term in the URL (?q=your-search)</div></div>';
       return;
     }
 
@@ -94,17 +94,25 @@
 
     if (results.length === 0) {
       searchResults.innerHTML = `
-                <div class="no-results">
-                    <div class="no-results-title">No results found</div>
-                    <div>Try different keywords or check spelling</div>
+                <div class="blog-content">
+                    <div class="no-results">
+                        <div class="no-results-title">No results found</div>
+                        <div>Try different keywords or check spelling</div>
+                    </div>
                 </div>
             `;
     } else {
       const resultsHTML = results.map(post => `
-                <article class="search-result">
-                    <h2><a href="${post.url}">${post.highlightedTitle}</a></h2>
-                    <div class="search-result-date">${post.date}</div>
-                    <div class="search-result-excerpt">${post.highlightedExcerpt}</div>
+                <article class="post-preview">
+                    <div class="blog-content">
+                        <h2 class="post-title post-title--linked">
+                            <a href="${post.url}">${post.highlightedTitle}</a>
+                        </h2>
+                        <p class="post-date">${post.date}</p>
+                        <div class="post-content">
+                            <p>${post.highlightedExcerpt}</p>
+                        </div>
+                    </div>
                 </article>
             `).join('');
       searchResults.innerHTML = resultsHTML;

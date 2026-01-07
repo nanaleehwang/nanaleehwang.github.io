@@ -558,7 +558,7 @@ body {
   transform: none;
 }
 
-/* BRUTALIST SEARCH RESULTS - HARSH DISPLAY */
+/* BRUTALIST SEARCH RESULTS - USING STANDARD POST STYLING */
 .search-query {
   margin-bottom: 2rem;
   color: var(--charcoal);
@@ -567,56 +567,6 @@ body {
   font-size: 1.5rem;
   text-transform: uppercase;
   font-family: 'JetBrains Mono', monospace;
-}
-
-.search-results-page {
-  margin-top: 2rem;
-}
-
-.search-result {
-  margin-bottom: 3rem;
-  padding-bottom: 2rem;
-  border-bottom: 8px solid var(--charcoal);
-}
-
-.search-result:last-child {
-  border-bottom: none;
-}
-
-.search-result h2 {
-  margin: 0 0 1rem 0;
-  font-size: 2rem;
-  font-family: 'JetBrains Mono', monospace;
-  text-transform: uppercase;
-}
-
-.search-result h2 a {
-  color: var(--hot-pink);
-  text-decoration: none;
-  font-weight: 900;
-  transition: none;
-}
-
-.search-result h2 a:hover {
-  color: var(--sunny-yellow);
-  background: var(--charcoal);
-  padding: 4px 8px;
-}
-
-.search-result-date {
-  color: var(--charcoal);
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  font-family: 'JetBrains Mono', monospace;
-}
-
-.search-result-excerpt {
-  color: var(--charcoal);
-  line-height: 1.4;
-  font-weight: 700;
-  font-size: 1.1rem;
 }
 
 .search-highlight {

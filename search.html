@@ -3,12 +3,13 @@ layout: home
 permalink: /search/
 ---
 
-<div class="blog-content">
-  <h1>Search Results</h1>
+<div class="blog-content" style="margin-top: 2rem;">
+  <h2>Search Results</h2>
   <div id="searchQuery" class="search-query"></div>
-  <div id="searchResults" class="search-results-page">
-    <div class="search-hint">Enter a search term in the URL (?q=your-search)</div>
-  </div>
+</div>
+
+<div id="searchResults" class="post-list">
+  <div class="search-hint">Enter a search term in the URL (?q=your-search)</div>
 </div>
 
 {% include search-data.html %}

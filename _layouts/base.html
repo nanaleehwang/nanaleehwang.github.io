@@ -1,49 +1,61 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    {% include head.html %}
-  </head>
-  <body>
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
-    {% include navigation.html %}
+<head>
+  {% include head.html %}
+</head>
 
-    <div class="main-container">
-      <div class="content-wrapper">
-        <main class="content-area">
-          {{ content }}
-        </main>
-        
-         <aside class="sidebar">
-           <div class="sidebar-section">
-             <div class="whoami-content" style="display: flex; align-items: center; gap: 10px;">
-               <img src="https://github.com/nanaleehwang.png" alt="Nana" style="border-radius: 50%; width: 80px; height: 80px; flex-shrink: 0;">
-               <p style="margin: 0;">Hi! I'm Nana Hwang, a 19 yo Korean-Brazilian math undergraduate at the Federal University of Minas Gerais.</p>
-             </div>
-           </div>
-           <div class="sidebar-section">
-             <h3>Navigation</h3>
-             <nav class="category-nav">
-               <ul>
-                 <li><a href="#" id="about-toggle">About</a></li>
-                 <li><a href="https://nanaleehwang.github.io/booklets/">Booklets</a></li>
-               </ul>
-               <div class="about-content" id="about-content" style="display: none;">
-                 <p>I'm Nana Hwang, a Korean-Brazilian math undergraduate at the Federal University of Minas Gerais, interested in partial differential equations, computation, and physics. Welcome to my project on Partial Differential Equations and Computational Fluid Dynamics. This initiative focuses on developing advanced numerical methods to solve Navier-Stokes equations, bridging theoretical mathematics with fundamental physics problems. We explore innovative algorithms for turbulence modeling, boundary layer analysis, and incompressible flow simulations to address core challenges in fluid dynamics and mathematical physics.</p>
-               </div>
-               <ul>
-                 {% assign categories = site.categories | sort %}
-                 {% for category in categories %}
-                   <li><a href="/categories.html#{{ category[0] | slugify }}">{{ category[0] }}</a></li>
-                 {% endfor %}
-               </ul>
-             </nav>
-           </div>
-         </aside>
-      </div>
+<body>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    type="text/javascript"></script>
+
+  {% include navigation.html %}
+
+  <div class="main-container">
+    <div class="content-wrapper">
+      <main class="content-area">
+        {{ content }}
+      </main>
+
+      <aside class="sidebar">
+        <div class="sidebar-section">
+          <div class="whoami-content" style="display: flex; align-items: center; gap: 10px;">
+            <img src="https://github.com/nanaleehwang.png" alt="Nana"
+              style="border-radius: 50%; width: 80px; height: 80px; flex-shrink: 0;">
+            <p style="margin: 0;">Hi! I'm Nana Hwang, a 19 yo Korean-Brazilian math undergraduate at the Federal
+              University of Minas Gerais.</p>
+          </div>
+        </div>
+        <div class="sidebar-section">
+          <h3>Navigation</h3>
+          <nav class="category-nav">
+            <ul>
+              <li><a href="#" id="about-toggle">About</a></li>
+              <div class="about-content" id="about-content" style="display: none;">
+                <p>I'm Nana Hwang, a Korean-Brazilian math undergraduate at the Federal University of Minas Gerais,
+                  interested in partial differential equations, computation, and physics. Welcome to my project on
+                  Partial Differential Equations and Computational Fluid Dynamics. This initiative focuses on developing
+                  advanced numerical methods to solve Navier-Stokes equations, bridging theoretical mathematics with
+                  fundamental physics problems. We explore innovative algorithms for turbulence modeling, boundary layer
+                  analysis, and incompressible flow simulations to address core challenges in fluid dynamics and
+                  mathematical physics.</p>
+              </div>
+              <li><a href="https://nanaleehwang.github.io/booklets/">Booklets</a></li>
+            </ul>
+            <ul>
+              {% assign categories = site.categories | sort %}
+              {% for category in categories %}
+              <li><a href="/categories.html#{{ category[0] | slugify }}">{{ category[0] }}</a></li>
+              {% endfor %}
+            </ul>
+          </nav>
+        </div>
+      </aside>
     </div>
+  </div>
 
-    {% include scripts.html %}
+  {% include scripts.html %}
 
-  </body>
+</body>
+
 </html>
